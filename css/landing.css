@@ -3,7 +3,6 @@ html{
 }
 html, body {
   overflow-x: hidden;
-  width:100%;
 }
 
 *{
@@ -102,7 +101,7 @@ nav img{
 @media(max-width: 700px){
   html, body {
     overflow-x: hidden;
-    width: 100%;
+    max-width: 700px;
     }
     #logo{
         padding-top:10px;
@@ -126,10 +125,9 @@ nav img{
         width: 200px;
         top: 0px;
         right: -300px;
-        z-index:2;
+        z-index:5;
         text-align: left;
         transition: 1s;
-        overflow-x: hidden;
     }
     .navLinks{
         padding: 30px;
