@@ -122,13 +122,14 @@ nav img{
     .navLinks{
         position: absolute;
         background:rgb(0, 0, 0);
-        height: 91vh;
+        height: 100vh;
         width: 200px;
         top: 0px;
         right: -300px;
         z-index:2;
         text-align: left;
         transition: 1s;
+        overflow-x: hidden;
     }
     .navLinks{
         padding: 30px;
