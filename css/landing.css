@@ -1,0 +1,524 @@
+html{
+    scroll-behavior: smooth;
+}
+html, body {
+  overflow-x: hidden;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', 'sans-serif';
+}
+
+.header{
+    min-height: 100vh;
+    min-width: 100%;
+    background: linear-gradient(rgba(0, 0, 0, 0.671),rgba(0, 0, 0, 0.512)),url(../img/violin.jpg);
+    background-position: center;
+    background-size: cover;
+    overflow: hidden;
+}
+nav{
+    display: flex !important;
+    padding: 2% 6%;
+    justify-content: space-between;
+    align-items: center;
+}
+nav img{
+    width: 86.400px;
+    height: 86.400px;
+}
+.navLinks{
+    flex: 1;
+    text-align: right;
+}
+.navLinks ul li{
+    list-style: none;
+    display:inline-block;
+    padding: 8px 12px;
+    position: relative;
+}
+.navLinks ul li a{
+    text-decoration: none;
+    color: white;
+    font-size: 13px;
+}
+.navLinks ul li a::after{
+    content:'';
+    height: 2px;
+    background:rgb(212, 255, 18);
+    width: 0%;
+    margin: auto;
+    display:block;
+    transition: 0.5s;
+}
+.navLinks ul li a:hover::after{
+    width: 100%;
+}
+.textBox{
+    width: 90%;
+    color: white;
+    left: 50%;
+    top: 50%;
+    position:absolute;
+    transform: translate(-50%,-50%);
+    text-align: center;
+}
+.textBox h1{
+    font-size: 65px;
+}
+.textBox p{
+    font-size: 30px;
+    margin: 10px 0px 40px;
+    color:whitesmoke;
+}
+.bumButton{
+    font-size: 13px;
+    color: white;
+    text-decoration: none;
+    display: inline-block;
+    border: 1px solid #fff;
+    padding: 12px 34px;
+    background: transparent;
+    position: relative;
+    cursor:pointer;
+}
+.bumButton:hover{
+    border: 1px solid rgb(212, 255, 18);
+    background:rgb(212, 255, 18) ;
+    color:black;
+    font-weight: bold;
+    transition: 1s;
+}
+#musicX{
+    padding-bottom: 10px;
+    border: 1px solid rgb(212, 255, 18);
+    background:rgb(212, 255, 18) ;
+    color:black;
+    font-weight: bold;   
+}
+@media(max-width: 700px){
+    #logo{
+        padding-top:10px;
+    }
+    .header{
+        background: linear-gradient(rgba(0, 0, 0, 0.726),rgba(0, 0, 0, 0.705)),url(../img/mridangam.jpg);
+    }
+    .textBox h1{
+        font-size: 25px;
+    }
+    .textBox p{
+        font-size:15px;
+    }
+    .navLinks ul li{
+        display: block;
+    }
+    .navLinks{
+        position: absolute;
+        background:rgb(0, 0, 0);
+        height: 91vh;
+        width: 200px;
+        top: 0px;
+        right: -300px;
+        z-index:2;
+        text-align: left;
+        transition: 1s;
+    }
+    .navLinks{
+        padding: 30px;
+    }
+    .bumButton{
+        font-size: 10px;
+        color: white;
+        text-decoration: none;
+        display: inline-block;
+        border: 1px solid #fff;
+        padding: 10px 30px;
+        background: transparent;
+        position: relative;
+        cursor:pointer;
+    }
+    .navLinks ul li a::after{
+        content:'';
+        height: 0px;
+        background:rgb(212, 255, 18);
+        width: 0%;
+        margin: auto;
+        display:block;
+        transition: 0.5s;
+    }
+    .navLinks ul li a:hover::after{
+        width:0%;
+    }
+    .fa{
+        display: block !important;
+        margin: 10px;
+        size: 22px;
+        color: white;
+        cursor: pointer;
+    }
+}
+/*------------------COURSE-------------------*/
+.course{
+    margin: auto;
+    text-align: center;
+    width: 100%;
+    padding-top: 80px;
+    background-color: rgb(0, 0, 0);
+    overflow: hidden;
+    background: radial-gradient(ellipse at bottom,#110505 0%,#000000);
+}
+h1{
+    font-size: 40px;
+    font-weight: 600;
+    color: white;
+}
+p{
+    color: white;
+    font-size: 16px;
+    line-height: 22px;
+    padding: 7px;
+}
+.course h1{
+    color: rgb(255, 255, 255);
+}
+.course p1{
+    color: rgb(190, 189, 189);
+}
+.row{
+    margin: 10%;
+    display: flex !important;
+    justify-content: space-between;
+    padding-right:10%;
+    padding-left: 10%;
+    margin-bottom: 0px;
+    height: 100%;
+}
+.row2{
+    margin: 10%;
+    display: flex !important;
+    justify-content: space-between;
+    padding-right:10%;
+    padding-left: 10%;
+    margin-top: 0px;
+    height: 100%;
+}
+.course-column{
+    flex-basis: 30%;
+    align-items: center;
+    width: 100%;
+    border-radius: 20px;
+    margin-bottom:5%;
+    padding: 20px 12px;
+    box-sizing: border-box;
+    transition: 0.5s;
+    height:300px;
+}
+
+#a{/*vocal*/
+    background: linear-gradient(rgba(228, 140, 81, 0.3),rgba(0, 0, 0, 0.7)),url(../img/vocal.jpeg);
+    background-position: center;
+    background-size: cover;
+}
+#b{/*----veena-----*/
+    background: linear-gradient(rgba(228, 140, 81, 0.3),rgba(0, 0, 0, 0.705)),url(../img/veena.jpg);
+    background-position: center;
+    background-size: cover;
+}
+#c{/*violin*/
+    background: linear-gradient(rgba(228, 140, 81, 0.3),rgba(0, 0, 0, 0.705)),url(../img/violin.jpg);
+    background-position: center;
+    background-size: cover;
+}
+#d{/*kathakali sangeetham*/
+    background: linear-gradient(rgba(228, 140, 81, 0.3),rgba(0, 0, 0, 0.705)),url(../img/kathakalisangeetham.jpg);
+    background-position: center;
+    background-size: cover;
+}
+#e{/*mridangam*/
+    background: linear-gradient(rgba(228, 140, 81, 0.3),rgba(0, 0, 0, 0.705)),url(../img/mridangam.jpg);
+    background-position: center;
+    background-size: cover;
+}
+#f{/*tabala*/
+    background: linear-gradient(rgba(228, 140, 81, 0.3),rgba(0, 0, 0, 0.705)),url(../img/tabala.jpg);
+    background-position: center;
+    background-size: cover;
+}
+.course-column:hover{
+    border-radius:0px;
+    box-shadow: -10px 0px 0px rgb(212, 255, 18);
+}
+.apply-btn{
+    font-size: 13px;
+    font-weight: bold;
+    margin-top: 20px;
+    color: white;
+    text-decoration: none;
+    display: inline-block;
+    border: 1px solid white;
+    padding: 12px 34px;
+    background: transparent;
+    position: relative;
+    cursor:pointer;
+}
+.apply-btn:hover{
+    border: 1px solid rgb(212, 255, 18);
+    background:rgb(212, 255, 18,.5) ;
+    color:black;
+    font-weight: bold;
+    transition: .5s;
+}
+@media(max-width: 700px){
+
+    .course{
+        background-repeat: no-repeat;
+    }
+
+    .course-column{
+        flex-basis: 300px;
+    }
+    .row{
+        flex-direction: column;
+    }
+    .row2{
+        flex-direction: column;
+    }
+    h1{
+        font-size: 32px;
+    }
+    p{
+        font-size: 14px;
+    }
+    .apply-btn{
+        font-size: 10px;
+        font-weight: bold;
+        color: white;
+        text-decoration: none;
+        display: inline-block;
+        border: 1px solid #fff;
+        padding: 10px 30px;
+        background: transparent;
+        position: relative;
+        cursor:pointer;
+        font-kerning: auto;
+    }
+    .apply-btn:hover{
+        border: 1px solid rgb(212, 255, 18);
+        background:rgb(212, 255, 18,.5) ;
+        color:black;
+        font-weight: bold;
+        transition: 1s;
+    }
+
+}
+/*---------------------Footer------------------------*/
+/* .footer {
+    padding: 100px 479.2px;
+    background-color: rgb(0, 0, 0);
+    color: #efefef;
+    display: flex;
+    width:auto;
+    justify-content: space-around;
+    overflow: hidden;
+  }
+  .col-3{
+    align-content: center;
+  }
+  .footer div{
+      text-align: center;
+  }
+  .footer div h3{
+      font-weight: 300;
+      margin-bottom: 50px;
+      letter-spacing: 1px;
+  }
+  .social-icons{
+    margin-top: 20px;
+}
+.social-icons i{
+    font-size: 22px;
+    margin: 10px;
+    cursor: pointer;
+} */
+.content1{
+    position: relative;
+    margin: 130px auto;
+    text-align: center;
+    padding: 20px 20px;
+  }
+  .content1 .text{
+    font-size: 2.5rem;
+    font-weight: 600;
+    color: #202020;
+  }
+  .content1 .p{
+    font-size: 2.1875rem;
+    font-weight: 600;
+    color: #202020;
+  }
+  footer{
+    bottom: 0px;
+    height:max-content;
+    width: 100%;
+    background: rgb(0, 0, 0);
+  }
+  .main-content{
+    display: flex;
+  }
+  .main-content .box{
+    flex-basis: 50%;
+    padding: 20px 20px;
+  }
+
+  .box h2{
+    font-size: 1.125rem;
+    font-weight: 600;
+    text-transform: uppercase;
+  }
+  .box .content{
+    margin: 20px 0 0 0;
+    position: relative;
+  }
+  .box .content:before{
+    position: absolute;
+    content: '';
+    top: -10px;
+    height: 2px;
+    width: 100%;
+    background: #1a1a1a;
+  }
+  .box .content:after{
+    position: absolute;
+    content: '';
+    height: 2px;
+    width: 15%;
+    background: rgb(212, 255, 18);
+    top: -10px;
+  }
+  .main-content .left{
+    padding-left:30px;
+  }
+  .left .content p{
+    padding-top:45px;
+    text-align: justify;
+  }
+  .left .content .social{
+    margin: 20px 0 0 0;
+  }
+  .left .content .social a{
+    padding: 0 2px;
+  }
+  .left .content .social a span{
+    height: 40px;
+    width: 40px;
+    background:white;
+    line-height: 40px;
+    text-align: center;
+    font-size: 18px;
+    border-radius: 5px;
+    transition: 0.3s;
+  }
+  .left .content .social a span:hover{
+    background: rgb(212, 255, 18);
+    color: black;
+  }
+  .center .content .fas{
+    font-size: 1.4375rem;
+    background: #ffffff;
+    height: 45px;
+    width: 45px;
+    line-height: 45px;
+    text-align: center;
+    border-radius: 50%;
+    transition: 0.3s;
+    cursor: pointer;
+  }
+  .center .content .fas:hover{
+    background: rgb(212, 255, 18);
+  }
+  .center .content .text{
+    font-size: 1.0625rem;
+    font-weight: 500;
+    padding-left: 10px;
+    color: whitesmoke;
+  }
+  .place{
+    padding-top:40px;
+  }
+  .center .content .phone{
+    margin: 15px 0;
+  }
+  .right form .text{
+    font-size: 1.0625rem;
+    margin-bottom: 2px;
+    color:whitesmoke;
+  }
+  .email{
+    padding-top:37px;
+  }
+  .right form .msg{
+    margin-top: 10px;
+  }
+  .right form input, .right form textarea{
+    width: 85%;
+    font-size: 1.0625rem;
+    background: #ffffff;
+    padding-left: 10px;
+    border: 1px solid #222222;
+  }
+  .right form input:focus,
+  .right form textarea:focus{
+    outline-color: #3498db;
+  }
+  .right form input{
+    height: 35px;
+  }
+  .right form .btn{
+    margin-top: 20px;
+  }
+  .right form .btn button{
+    height: 40px;
+    width: 30%;
+    border: none;
+    outline: none;
+    background: white;
+    font-size: 1.0625rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: .3s;
+  }
+  .right form .btn button:hover{
+    background: rgb(212, 255, 18);
+    color: black;
+  }
+  .bottom center{
+    padding: 5px;
+    margin-top: 30px;
+    font-size: 0.9375rem;
+    background: #151515;
+  }
+  .bottom center span{
+    color: #656565;
+  }
+  .bottom center a{
+    color: rgb(212, 255, 18);
+    text-decoration: none;
+  }
+  .bottom center a:hover{
+    text-decoration: underline;
+  }
+  @media screen and (max-width: 900px) {
+    footer{
+      position: relative;
+      bottom: 0px;
+    }
+    .main-content{
+      flex-wrap: wrap;
+      flex-direction: column;
+    }
+    .main-content .box{
+      margin: 5px 0;
+    }
+  }

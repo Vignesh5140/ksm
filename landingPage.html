@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Krishna's School of Music</title>
+    <link rel="stylesheet" type="text/css" href="./css/landing.css">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/ca09b34e8d.js" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function () {
+            // https://dashboard.emailjs.com/admin/account
+            emailjs.init('PYFMhuzEGPHUhdOTe');//public key
+        })();
+    </script>
+    <script type="text/javascript">
+        window.onload = function () {
+            document.getElementById('contact-form').addEventListener('submit', function (event) {
+                event.preventDefault();
+           
+                // these IDs from the previous steps
+                emailjs.sendForm('contact_service', 'contact_form', this)
+                    .then(function () {
+                        console.log('SUCCESS!');
+                        event.target.reset();
+                    }, function (error) {
+                        console.log('FAILED...', error);
+                    });
+            });
+        }
+    </script>
+</head>
+
+<body>
+    <section class="header">
+        <nav>
+            <a id="logo" href="landingPage.html"><img
+                    src="https://static.wixstatic.com/media/7b9073_cb108253ae7545b29803f49636fa01d6~mv2.png/v1/fill/w_100,h_100,al_c,q_85,usm_0.66_1.00_0.01/Untitled.webp"></a>
+            <div class="navLinks" id="navLinks">
+                <i class="fa fa-times" onclick="hideMenu()"></i>
+                <ul>
+                    <li><a href="./landingPage.html">HOME</a></li>
+                    <li><a href="#1">COURSE</a></li>
+                    <li><a href="./admission.html" target="_blank">ADMISSION</a></li>
+                    <!-- <li><a href="#">STORE</a></li> -->
+                    <li><a href="#foot">CONTACT US </a></li>
+                    <li><a href="#js" onclick="music()" title="music on/off" class="bumButton" id="musicX"><audio
+                                controls hidden loop="loop" id="myTune">
+                                <source src="../KSM NEW/violin.mp3" type="audio/ogg">
+                                <source src="../KSM NEW/violin.mp3" type="audio/mpeg">
+                            </audio>MUSIC</a></li>
+                </ul>
+            </div>
+            <i class="fa fa-bars" onclick="showMenu()"></i>
+            <div class="textBox">
+                <h1>Krishna's School of Music</h1>
+                <p>Find the musician in you!</p>
+                <a href="#foot" class="bumButton">Visit Us To Know More</a>
+            </div>
+    </section>
+    <!----------------------Course-------------------->
+    <section class="course" id="1">
+
+        <h1>Courses We Offer</h1>
+        <p>Carnatic vocal and instruments</p>
+
+        <div class="row">
+            <div class="course-column" id="a">
+                <a href="" class="apply-btn">VOCAL</a>
+            </div>
+            <div class="course-column" id="b">
+                <a href="" class="apply-btn">VEENA</a>
+            </div>
+            <div class="course-column" id="c">
+                <a href="" class="apply-btn">VIOLIN</a>
+            </div>
+        </div>
+        <div class="row2">
+            <div class="course-column" id="d">
+                <a href="" class="apply-btn">KATHAKALI SANGEETHAM</a>
+            </div>
+            <div class="course-column" id="e">
+                <a href="" class="apply-btn">MRIDANGAM</a>
+            </div>
+            <div class="course-column" id="f">
+                <a href="" class="apply-btn">TABLA</a>
+            </div>
+        </div>
+    </section>
+    <!--------Footer------------>
+    <!-- <div class="footer" id="foot">  
+                <div class="col-3">
+                    <h3>REACH US</h3>
+                    <p style="padding-top: 0px;">Ram Vihar, Onapparamba Road<br>P.O Chirakkal, Kannur, Kerala, IN</p>
+                    <div class="social-icons">
+                    <a style="color:white" href="https://www.facebook.com/krishnaschoolofmusic/" target="_blank"><i class="fab fa-facebook"></i></a>
+                    <a style="color:white" href="https://instagram.com/krishnaschoolofmusic?igshid=YmMyMTA2M2Y=" target="_blank"><i class="fab fa-instagram"></i></a>
+                    <a style="color:white" href="mailto:krishnainstituteofmusic@gmail.com" target="_blank"><i class="fas fa-at"></i></a>
+                    </div>
+                </div>
+            </div> -->
+    <footer id="foot">
+        <div class="main-content">
+            <div class="left box">
+                <h2 style="color:whitesmoke;">About us</h2>
+                <div class="content">
+                    <p><b style="color:rgb(212, 255, 18);">Krishna's school of Music</b> is an online educational establishment. We contribute great
+                        roles in the field of Fine arts education, providing the best online classes for Carnatic music,
+                        Veena, Violin, Mridangam and Tabla. We have a great team of the best South Indian artists and
+                        renowned resource persons.</p>
+                    <div class="social">
+                        <a style="color:black" href="https://www.facebook.com/krishnaschoolofmusic/"
+                            target="_blank"><span class="fab fa-facebook-f"></span></a>
+                        <a style="color:black" href="#"><span class="fab fa-twitter"></span></a>
+                        <a style="color:black" href="https://instagram.com/krishnaschoolofmusic?igshid=YmMyMTA2M2Y="
+                            target="_blank"><span class="fab fa-instagram"></span></a>
+                        <a style="color:black" href="https://youtube.com/channel/UCXC_MU-F9TGsYvhXYtze6yA"
+                            target="_blank"><span class="fab fa-youtube"></span></a>
+                    </div>
+                </div>
+            </div>
+            <div class="center box">
+                <h2 style="color:whitesmoke;">Address</h2>
+                <div class="content">
+                    <div class="place">
+                        <span class="fas fa-map-marker-alt"></span>
+                        <span class="text">Ram Vihar,P.O Chirakkal,IN</span>
+                    </div>
+                    <div class="phone">
+                        <span class="fas fa-phone-alt"></span>
+                        <span class="text">+91 9496452721</span>
+                    </div>
+                    <div class="email" style="padding-top:0px;">
+                        <span class="fas fa-envelope"></span>
+                        <span class="text">krishnainstituteofmusic@gmail.com</span>
+                    </div>
+                </div>
+            </div>
+            <div class="right box">
+                <h2 style="color:whitesmoke;">Contact us</h2>
+                <div class="content">
+                    <form id="contact-form">
+                        <div class="email">
+                            <div class="text">Name *</div>
+                            <input type="text" name="user_name" required>
+                        </div>
+                        <div class="email">
+                            <div class="text">Email *</div>
+                            <input type="email" name="user_email" required>
+                        </div>
+                        <div class="msg">
+                            <div class="text">Message *</div>
+                            <textarea rows="2" cols="25" name="message" required></textarea>
+                        </div>
+                        <div class="btn">
+                            <button type="submit"><b>Send</b></button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="bottom">
+            <center>
+                <span class="credit">Created By <a href="https://www.linkedin.com/in/vignesh-sankar-a-6b4a5b1ba" target="_blank"> Vignesh Sankar A </a><span> | <a href="#logo"></span>Krishna's School of
+                        Music</a> | </span>
+                <span class="far fa-copyright"></span><span> 2021 All rights reserved.</span>
+            </center>
+        </div>
+    </footer>
+
+    <!----------------------JS-------------------->
+
+    <script id="js">
+        function music() {
+            var myAudio = document.getElementById("myTune");
+            if (myAudio.paused) {
+                myAudio.play();
+            } else {
+                myAudio.pause();
+            }
+        }
+    </script>
+    <script>
+        var close = document.getElementById("navLinks");
+        function showMenu() { navLinks.style.right = "0"; }
+        function hideMenu() { navLinks.style.right = "-260px"; }
+    </script>
+</body>
+
+</html>
