@@ -145,16 +145,20 @@
                 <h2 style="color:whitesmoke;">Contact us</h2>
                 <div class="content">
                     <form id="contact-form">
-                        <div class="email">
-                            <div class="text">Name *</div>
+                        <div class="name">
+                            <div class="text">Name</div>
                             <input type="text" name="user_name" required>
                         </div>
                         <div class="email">
-                            <div class="text">Email *</div>
+                            <div class="text">Email</div>
                             <input type="email" name="user_email" required>
                         </div>
+                        <div class="pno">
+                            <div class="text">Phone Number</div>
+                            <input type="tel" pattern="[0-9]{10}" name="contact_number" placeholder="+91-xxxxxxxxxx" required>
+                        </div>
                         <div class="msg">
-                            <div class="text">Message *</div>
+                            <div class="text">Message</div>
                             <textarea rows="2" cols="25" name="message" required></textarea>
                         </div>
                         <div class="btn">
