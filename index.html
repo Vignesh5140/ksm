@@ -39,20 +39,20 @@
 <body>
     <section class="header">
         <nav>
-            <a id="logo" href="landingPage.html"><img
+            <a id="logo" href="index.html"><img
                     src="https://static.wixstatic.com/media/7b9073_cb108253ae7545b29803f49636fa01d6~mv2.png/v1/fill/w_100,h_100,al_c,q_85,usm_0.66_1.00_0.01/Untitled.webp"></a>
             <div class="navLinks" id="navLinks">
                 <i class="fa fa-times" onclick="hideMenu()"></i>
                 <ul>
-                    <li><a href="./landingPage.html">HOME</a></li>
+                    <li><a href="./index.html">HOME</a></li>
                     <li><a href="#1">COURSE</a></li>
-                    <li><a href="./admission.html" target="_blank">ADMISSION</a></li>
+                    <li><a href="#" target="_blank">ADMISSION</a></li>
                     <!-- <li><a href="#">STORE</a></li> -->
                     <li><a href="#foot">CONTACT US </a></li>
                     <li><a href="#js" onclick="music()" title="music on/off" class="bumButton" id="musicX"><audio
                                 controls hidden loop="loop" id="myTune">
-                                <source src="../KSM NEW/violin.mp3" type="audio/ogg">
-                                <source src="../KSM NEW/violin.mp3" type="audio/mpeg">
+                                <source src="../KSM/violin.mp3" type="audio/ogg">
+                                <source src="../KSM/violin.mp3" type="audio/mpeg">
                             </audio>MUSIC</a></li>
                 </ul>
             </div>
@@ -145,16 +145,20 @@
                 <h2 style="color:whitesmoke;">Contact us</h2>
                 <div class="content">
                     <form id="contact-form">
-                        <div class="email">
-                            <div class="text">Name *</div>
+                        <div class="name">
+                            <div class="text">Name</div>
                             <input type="text" name="user_name" required>
                         </div>
                         <div class="email">
-                            <div class="text">Email *</div>
+                            <div class="text">Email</div>
                             <input type="email" name="user_email" required>
                         </div>
+                        <div class="pno">
+                            <div class="text">Phone Number</div>
+                            <input type="tel" pattern="[0-9]{10}" name="contact_number" placeholder="+91-xxxxxxxxxx" required>
+                        </div>
                         <div class="msg">
-                            <div class="text">Message *</div>
+                            <div class="text">Message</div>
                             <textarea rows="2" cols="25" name="message" required></textarea>
                         </div>
                         <div class="btn">
