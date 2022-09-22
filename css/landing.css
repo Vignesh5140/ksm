@@ -318,34 +318,6 @@ p{
 
 }
 /*---------------------Footer------------------------*/
-/* .footer {
-    padding: 100px 479.2px;
-    background-color: rgb(0, 0, 0);
-    color: #efefef;
-    display: flex;
-    width:auto;
-    justify-content: space-around;
-    overflow: hidden;
-  }
-  .col-3{
-    align-content: center;
-  }
-  .footer div{
-      text-align: center;
-  }
-  .footer div h3{
-      font-weight: 300;
-      margin-bottom: 50px;
-      letter-spacing: 1px;
-  }
-  .social-icons{
-    margin-top: 20px;
-}
-.social-icons i{
-    font-size: 22px;
-    margin: 10px;
-    cursor: pointer;
-} */
 .content1{
     position: relative;
     margin: 130px auto;
@@ -406,7 +378,8 @@ p{
   }
   .left .content p{
     padding-top:45px;
-    text-align: justify;
+    text-align:justify;
+    padding-left: 0%;
   }
   .left .content .social{
     margin: 20px 0 0 0;
@@ -528,5 +501,11 @@ p{
     }
     .main-content .box{
       margin: 5px 0;
+    }
+    .center .content .email .text{
+      font-size:15px;
+    }
+    .left .content p{
+      text-align:left;
     }
   }
