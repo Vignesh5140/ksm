@@ -34,16 +34,6 @@
             });
         }
     </script>
-    <script id="js">
-        function music() {
-            var myAudio = document.getElementById("myTune");
-            if (myAudio.paused) {
-                myAudio.play();
-            } else {
-                myAudio.pause();
-            }
-        }
-    </script>
 </head>
 
 <body>
@@ -61,8 +51,7 @@
                     <li><a href="#foot">CONTACT US </a></li>
                     <li><a href="#js" onclick="music()" title="music on/off" class="bumButton" id="musicX">
                             <audio preload="auto" controls hidden loop="loop" id="myTune">
-                                <!-- <source src="../KSM/js/violin.js" type="audio/ogg">
-                                <source src="../KSM/js/violin.js" type="audio/mpeg"> -->
+                                <source src="../KSM/js/violin.mp3" type="audio/ogg">
                                 <source src="../KSM/js/violin.mp3" type="audio/mpeg">
                             </audio>MUSIC</a></li>
                 </ul>
@@ -190,7 +179,16 @@
 
     <!----------------------JS-------------------->
 
-    
+    <script id="js">
+        function music() {
+            var myAudio = document.getElementById("myTune");
+            if (myAudio.paused) {
+                myAudio.play();
+            } else {
+                myAudio.pause();
+            }
+        }
+    </script>
     <script>
         var close = document.getElementById("navLinks");
         function showMenu() { navLinks.style.right = "0"; }
