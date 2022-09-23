@@ -34,6 +34,16 @@
             });
         }
     </script>
+    <script id="js">
+        function music() {
+            var myAudio = document.getElementById("myTune");
+            if (myAudio.paused) {
+                myAudio.play();
+            } else {
+                myAudio.pause();
+            }
+        }
+    </script>
 </head>
 
 <body>
@@ -180,16 +190,7 @@
 
     <!----------------------JS-------------------->
 
-    <script id="js">
-        function music() {
-            var myAudio = document.getElementById("myTune");
-            if (myAudio.paused) {
-                myAudio.play();
-            } else {
-                myAudio.pause();
-            }
-        }
-    </script>
+    
     <script>
         var close = document.getElementById("navLinks");
         function showMenu() { navLinks.style.right = "0"; }
