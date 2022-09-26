@@ -177,8 +177,7 @@ nav .fa{
     padding-top: 80px;
     background-color: rgb(0, 0, 0);
     overflow: hidden;
-    /* background: radial-gradient(ellipse at bottom,#110505 0%,#000000); */
-    background:#000000;
+    background: radial-gradient(ellipse at bottom,#110505 0%,#000000);
 }
 h1{
     font-size: 40px;
