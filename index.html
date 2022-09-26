@@ -50,11 +50,6 @@
                     <li><a href="#">ADMISSION</a></li>
                     <!-- <li><a href="#">STORE</a></li> -->
                     <li><a href="#foot">CONTACT US </a></li>
-                    <li><a href="#js" onclick="music()" title="music on/off" class="bumButton" id="musicX">
-                            <audio preload="auto" controls hidden loop="loop" id="myTune">
-                                <source src="../KSM/violin.mp3" type="audio/ogg">
-                                <source src="../KSM/violin.mp3" type="audio/mpeg">
-                            </audio>MUSIC</a></li>
                 </ul>
             </div>
             <i class="fa fa-bars" onclick="showMenu()"></i>
@@ -93,18 +88,6 @@
             </div>
         </div>
     </section>
-    <!--------Footer------------>
-    <!-- <div class="footer" id="foot">  
-                <div class="col-3">
-                    <h3>REACH US</h3>
-                    <p style="padding-top: 0px;">Ram Vihar, Onapparamba Road<br>P.O Chirakkal, Kannur, Kerala, IN</p>
-                    <div class="social-icons">
-                    <a style="color:white" href="https://www.facebook.com/krishnaschoolofmusic/" target="_blank"><i class="fab fa-facebook"></i></a>
-                    <a style="color:white" href="https://instagram.com/krishnaschoolofmusic?igshid=YmMyMTA2M2Y=" target="_blank"><i class="fab fa-instagram"></i></a>
-                    <a style="color:white" href="mailto:krishnainstituteofmusic@gmail.com" target="_blank"><i class="fas fa-at"></i></a>
-                    </div>
-                </div>
-            </div> -->
     <footer id="foot">
         <div class="main-content">
             <div class="left box">
@@ -179,18 +162,6 @@
     </footer>
 
     <!----------------------JS-------------------->
-
-    <script id="js">
-        function music() {
-            // var myAudio = document.getElementById("myTune");
-            var myAudio= new Audio("violin.mp3");
-            if (myAudio.paused) {
-                myAudio.play();
-            } else {
-                myAudio.pause();
-            }
-        }
-    </script>
     <script>
         var close = document.getElementById("navLinks");
         function showMenu() { navLinks.style.right = "0"; }
