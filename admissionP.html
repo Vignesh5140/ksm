@@ -5,29 +5,29 @@
     <title>Admission Form</title>
     <link rel="stylesheet" type="text/css" href="./css/styleAd.css">
      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-     <script type="text/javascript">
+    <!-- <script type="text/javascript">
       (function () {
           // https://dashboard.emailjs.com/admin/account
           emailjs.init('PYFMhuzEGPHUhdOTe');//public key
       })();
-  </script>
-  <script type="text/javascript">
-      window.onload = function () {
-          document.getElementById('admission-form').addEventListener('submit', function (event) {
-              event.preventDefault();
-         
-              // these IDs from the previous steps
-              emailjs.sendForm('service_4jkoawq', 'adm_123', this)
-                  .then(function () {
-                      console.log('SUCCESS!');
-                      event.target.reset();
-                  }, function (error) {
-                      console.log('FAILED...', error);
-                  });
-          });
-      }
-  </script>
-   </head>
+    </script> -->
+    <script type="text/javascript">
+        window.onload = function () {
+            document.getElementById('admission-form').addEventListener('submit', function (event) {
+                event.preventDefault();
+          
+                // these IDs from the previous steps
+                emailjs.sendForm('service_4jkoawq','adm_123', this)
+                    .then(function () {
+                        console.log('SUCCESS!');
+                        event.target.reset();
+                    }, function (error) {
+                        console.log('FAILED...', error);
+                    });
+            });
+        }
+    </script>
+  </head>
 <body>
   <div class="container">
     <div class="title">Admission Form</div>
