@@ -110,11 +110,11 @@ form .input-box span.details{
  form input[type="radio"]{
    display: none;
  }
- form .button{
+ form .btn{
    height: 45px;
    margin: 35px 0
  }
- form .button input{
+ form .btn button{
    height: 100%;
    width: 100%;
    border-radius: 5px;
@@ -127,7 +127,7 @@ form .input-box span.details{
    transition: all 0.3s ease;
    background: linear-gradient(135deg, #222222, #925638);
  }
- form .button input:hover{
+ form .btn button:hover{
   /* transform: scale(0.99); */
   background: linear-gradient(135deg, #222222, #925638);
   }
