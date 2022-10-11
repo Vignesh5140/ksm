@@ -5,21 +5,43 @@
     <title>Admission Form</title>
     <link rel="stylesheet" type="text/css" href="./css/styleAd.css">
      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <script type="text/javascript">
+      (function () {
+          // https://dashboard.emailjs.com/admin/account
+          emailjs.init('PYFMhuzEGPHUhdOTe');//public key
+      })();
+  </script>
+  <script type="text/javascript">
+      window.onload = function () {
+          document.getElementById('admission-form').addEventListener('submit', function (event) {
+              event.preventDefault();
+         
+              // these IDs from the previous steps
+              emailjs.sendForm('service_4jkoawq', 'admission_form', this)
+                  .then(function () {
+                      console.log('SUCCESS!');
+                      event.target.reset();
+                  }, function (error) {
+                      console.log('FAILED...', error);
+                  });
+          });
+      }
+  </script>
    </head>
 <body>
   <div class="container">
     <div class="title">Admission Form</div>
     <div class="content">
-      <form action="#">
+      <form action="#" id="admission-form">
         <div class="user-details">
           <div class="input-box">
             <span class="details">Full Name</span>
-            <input type="text" placeholder="Enter your name" required>
+            <input type="text" name="user_name" placeholder="Enter your name" required>
           </div>
           <div class="input-box">
             <span class="details">Subject</span>
             <!-- <input type="text" placeholder="Enter your username" required> -->
-            <select name="Subject">
+            <select name="subject">
               <option value="Vocal">Vocal</option>
               <option value="Vocal">Veena</option>
               <option value="Vocal">Violin</option>
@@ -30,15 +52,15 @@
           </div>
           <div class="input-box">
             <span class="details">Email</span>
-            <input type="text" placeholder="Enter your email" required>
+            <input type="email" name="user_email" placeholder="Enter your email" required>
           </div>
           <div class="input-box">
             <span class="details">Phone Number</span>
-            <input type="text" placeholder="Enter your number" required>
+            <input type="tel" pattern="[0-9]{10}" name="contact_number" placeholder="Enter your number" required>
           </div>
           <div class="input-box">
             <span class="details">Message</span>
-            <textarea name="Message" cols="30" rows="10" placeholder="Enter your message here!"></textarea>
+            <textarea name="message" cols="30" rows="10" placeholder="Enter your message here!"></textarea>
           </div>
           <!-- <div class="input-box">
             <span class="details">Password</span>
